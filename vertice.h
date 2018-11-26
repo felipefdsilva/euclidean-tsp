@@ -9,12 +9,18 @@
 #ifndef VERTEX_H
 #define VERTEX_H "vertice.h"
 
-Class Vertex {
+class Vertex {
   public:
-    Vertex(double, double);
-    double getX ();
-    double getY ();
+    Vertex();
+    Vertex&  operator=(const Vertex&);
+    void setIndex(unsigned);
+    void setX (float);
+    void setY (float);
+    unsigned getIndex() const;
+    float getX () const;
+    float getY () const;
   private:
+    unsigned mIndex;
     double mX;
     double mY;
 };

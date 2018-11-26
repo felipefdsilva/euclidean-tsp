@@ -14,18 +14,18 @@
 
 using namespace std;
 
-Class Cicle {
+class Cicle {
   public:
-    Cicle (unsigned);
+    Cicle (char *);//construtor - recebe o nome do arquivo com as coordenadas dos pontos e monta mCicle e mNumberOfVertices
     double computeDistance(Vertex, Vertex); //calcula distancia euclideana entre dois vertices
-    double computeCicleCost (vector <Vertex>); //calcula o custo total do ciclo (soma das distancias)
+    double computeCicleCost (vector <Vertex> *); //calcula o custo total do ciclo (soma das distancias)
     double NearestNeighbour(unsigned); //monta um ciclo escolhendo o vizinho mais proximo
-    double BestNearestNeighbourCicle ();
-    double TwoOPTSwap(pair, unsigned, unsigned);
-    double TwoOPT (pair);
+    void BestNearestNeighbourCicle (); //teste todas as possibilidades de NearestNeighbour
+    void TwoOptimizationSwap(vector <Vertex> *, unsigned, unsigned);//função auxiliar para TwoOptimization
+    void TwoOptimization ();//otimização eliminando cruzamentos
   private:
     unsigned mNumberOfVertices;
-    vector <Vertex> mVertices;
+    unsigned mCost;
     vector <Vertex> mCicle;
 };
 #endif
