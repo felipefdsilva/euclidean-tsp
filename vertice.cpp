@@ -8,13 +8,29 @@
 
 #include "vertice.h"
 
-Vertex::Vertex(double x, double y){
+Vertex&  Vertex::operator=(const Vertex&v1){
+  this ->setIndex(v1.getIndex());
+  this->setX(v1.getX());
+  this->setY(v1.getY());
+  return *this;
+}
+Vertex::Vertex(){
+}
+void Vertex::setIndex (unsigned index){
+  mIndex = index;
+}
+void Vertex::setX(float x){
   mX = x;
+}
+void Vertex::setY(float y){
   mY = y;
 }
-double Vertex::getX (){
+unsigned Vertex::getIndex () const{
+  return mIndex;
+}
+float Vertex::getX () const{
   return mX;
 }
-double Vertex::getY (){
+float Vertex::getY () const{
   return mY;
 }
