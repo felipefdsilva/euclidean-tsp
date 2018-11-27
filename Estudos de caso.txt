@@ -1,0 +1,35 @@
+5 pontos:
+custo - 1774888
+tempo - 0,000999s
+
+10 pontos:
+custo - 2921770
+tempo - 0,002995s
+
+20 pontos:
+custo - 3847702
+tempo - 0,005275s
+
+50 pontos:
+custo - 5843159
+tempo - 0,021957
+
+100 pontos:
+custo - 8575338
+tempo - 0,115494s
+
+200 pontos:
+custo - 11372439
+tempo - 0,863349s
+
+500 pontos:
+custo - 17861109
+tempo - 12,6454
+
+1000 pontos:
+custo - 25309595
+tempo - 115,835s
+
+2000 pontos:
+custo - 35166611
+tempo - 890,526s

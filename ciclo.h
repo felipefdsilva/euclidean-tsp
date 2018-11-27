@@ -26,6 +26,7 @@ class Cicle {
   private:
     unsigned mNumberOfVertices;
     unsigned mCost;
+    vector <Vertex> mVertices;
     vector <Vertex> mCicle;
 };
 #endif
