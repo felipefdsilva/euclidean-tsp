@@ -18,15 +18,15 @@ class Cicle {
   public:
     Cicle (char *);//construtor - recebe o nome do arquivo com as coordenadas dos pontos e monta mCicle e mNumberOfVertices
     double computeDistance(Vertex, Vertex); //calcula distancia euclideana entre dois vertices
-    double computeCicleCost (vector <Vertex> *); //calcula o custo total do ciclo (soma das distancias)
-    double NearestNeighbour(unsigned); //monta um ciclo escolhendo o vizinho mais proximo
-    void BestNearestNeighbourCicle (); //teste todas as possibilidades de NearestNeighbour
+    double computeCicleCost (vector <Vertex> *); //calcula o custo total do ciclo (soma das distancias entre vizinhos)
+    double NearestNeighbour(unsigned); //monta um ciclo escolhendo o vizinho mais proximo e ordenando mCicle
+    void LeastCostNearestNeighbour (); //testa todas as possibilidades de NearestNeighbour e escolhe o cicle de menor custo
     void TwoOptimizationSwap(vector <Vertex> *, unsigned, unsigned);//função auxiliar para TwoOptimization
     void TwoOptimization ();//otimização eliminando cruzamentos
   private:
-    unsigned mNumberOfVertices;
-    unsigned mCost;
-    vector <Vertex> mVertices;
-    vector <Vertex> mCicle;
+    unsigned mNumberOfVertices; //numero de vértices do grafo
+    unsigned mCost; //custo do ciclo atual em mCicle
+    vector <Vertex> mVertices; //vertices ordenados por indice (como listados no arquivo de entrada)
+    vector <Vertex> mCicle; //vertices ordenados no ciclo hamiltoniano de menor custo
 };
 #endif
